@@ -1,0 +1,1239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.6 on win32)" generated="2024-11-22T06:14:49.746122" rpa="false" schemaversion="5">
+<suite id="s1" name="Campaign" source="C:\Users\lenovo\PycharmProjects\SapphireTestAutomation\Pages\Campaign.robot">
+<test id="s1-t1" name="[Set up]" line="11">
+<kw name="Start browser and maximize" owner="Resorces">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:14:50.517060" level="INFO">Opening browser 'Chrome' to base url 'https://testing.sapphireapps.com/authentication/login/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-22T06:14:50.517060" elapsed="4.545309"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-22T06:14:55.063366" elapsed="0.093746"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:14:55.158128" level="INFO">Typing text 'agency@sapphireapps.com' into text field 'xpath://input[@name="username"]'.</msg>
+<arg>${email}</arg>
+<arg>agency@sapphireapps.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:14:55.157112" elapsed="0.206453"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:14:55.364563" level="INFO">Typing password into text field 'xpath://input[@name="password"]'.</msg>
+<msg time="2024-11-22T06:14:55.402461" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${password}</arg>
+<arg>j*1N7iEF7T%O</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:14:55.363565" elapsed="0.106709"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${login_button}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-11-22T06:14:55.470274" elapsed="0.280253"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_button}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-22T06:14:55.750527" elapsed="0.064826"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:14:55.816349" level="INFO">Clicking button 'xpath://button[@id="login-button"]'.</msg>
+<arg>${login_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:14:55.815353" elapsed="3.500915"/>
+</kw>
+<status status="PASS" start="2024-11-22T06:14:50.516063" elapsed="8.800205"/>
+</kw>
+<kw name="Read Number of Rows" owner="CampaignUserKeyword">
+<kw name="Fetch Number Of Rows" owner="ReadCampaignData">
+<msg time="2024-11-22T06:14:59.317263" level="INFO">${maxr} = 4</msg>
+<var>${maxr}</var>
+<arg>${Sheetname}</arg>
+<status status="PASS" start="2024-11-22T06:14:59.317263" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${maxr}</value>
+<status status="PASS" start="2024-11-22T06:14:59.317263" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-22T06:14:59.318260" level="INFO">${row} = 4</msg>
+<var>${row}</var>
+<arg>Sheet1</arg>
+<status status="PASS" start="2024-11-22T06:14:59.317263" elapsed="0.000997"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Read Excel Data of Cell" owner="CampaignUserKeyword">
+<kw name="Fetch Cell Data" owner="ReadCampaignData">
+<msg time="2024-11-22T06:14:59.333221" level="INFO">${celldata} = Test Campaign for Automation10</msg>
+<var>${celldata}</var>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-11-22T06:14:59.333221" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${celldata}</value>
+<status status="PASS" start="2024-11-22T06:14:59.334217" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-22T06:14:59.334217" level="INFO">${campaignNameInput} = Test Campaign for Automation10</msg>
+<var>${campaignNameInput}</var>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>1</arg>
+<status status="PASS" start="2024-11-22T06:14:59.333221" elapsed="0.000996"/>
+</kw>
+<kw name="Read Excel Data of Cell" owner="CampaignUserKeyword">
+<kw name="Fetch Cell Data" owner="ReadCampaignData">
+<msg time="2024-11-22T06:14:59.335214" level="INFO">${celldata} = TT</msg>
+<var>${celldata}</var>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-11-22T06:14:59.335214" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${celldata}</value>
+<status status="PASS" start="2024-11-22T06:14:59.335214" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-22T06:14:59.335214" level="INFO">${selectCategory} = TT</msg>
+<var>${selectCategory}</var>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>2</arg>
+<status status="PASS" start="2024-11-22T06:14:59.334217" elapsed="0.000997"/>
+</kw>
+<kw name="Read Excel Data of Cell" owner="CampaignUserKeyword">
+<kw name="Fetch Cell Data" owner="ReadCampaignData">
+<msg time="2024-11-22T06:14:59.337210" level="INFO">${celldata} = 2024-11-28 00:00:00</msg>
+<var>${celldata}</var>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-11-22T06:14:59.336212" elapsed="0.000998"/>
+</kw>
+<return>
+<value>${celldata}</value>
+<status status="PASS" start="2024-11-22T06:14:59.337210" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-22T06:14:59.337210" level="INFO">${submissionDateInput} = 2024-11-28 00:00:00</msg>
+<var>${submissionDateInput}</var>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>3</arg>
+<status status="PASS" start="2024-11-22T06:14:59.336212" elapsed="0.000998"/>
+</kw>
+<kw name="Read Excel Data of Cell" owner="CampaignUserKeyword">
+<kw name="Fetch Cell Data" owner="ReadCampaignData">
+<msg time="2024-11-22T06:14:59.338209" level="INFO">${celldata} = 2024-11-28 00:00:00</msg>
+<var>${celldata}</var>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-11-22T06:14:59.338209" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${celldata}</value>
+<status status="PASS" start="2024-11-22T06:14:59.339207" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-22T06:14:59.339207" level="INFO">${clientDateInput} = 2024-11-28 00:00:00</msg>
+<var>${clientDateInput}</var>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>4</arg>
+<status status="PASS" start="2024-11-22T06:14:59.338209" elapsed="0.000998"/>
+</kw>
+<kw name="Read Excel Data of Cell" owner="CampaignUserKeyword">
+<kw name="Fetch Cell Data" owner="ReadCampaignData">
+<msg time="2024-11-22T06:14:59.340202" level="INFO">${celldata} = 900</msg>
+<var>${celldata}</var>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-11-22T06:14:59.340202" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${celldata}</value>
+<status status="PASS" start="2024-11-22T06:14:59.340202" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-22T06:14:59.341199" level="INFO">${budgetInput} = 900</msg>
+<var>${budgetInput}</var>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>5</arg>
+<status status="PASS" start="2024-11-22T06:14:59.339207" elapsed="0.001992"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:14:59.341199" level="INFO">Clicking element 'xpath://span[@class="ml-2 text-white"]'.</msg>
+<arg>${campaign_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:14:59.341199" elapsed="4.258104"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:03.600300" level="INFO">Clicking element 'xpath://span[@id="select2-id_client_name-container"]'.</msg>
+<arg>${campaign_form_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:03.600300" elapsed="0.115690"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:03.716987" level="INFO">Typing text 'Test Campaign for Automation10' into text field 'xpath://input[@name="name"]'.</msg>
+<arg>${campaign_name_locator}</arg>
+<arg>${campaignNameInput}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:03.716987" elapsed="0.304188"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:04.021175" level="INFO">Selecting options from selection list 'xpath://select[@name="client_category"]' by value TT.</msg>
+<arg>${select_category_locator}</arg>
+<arg>${selectCategory}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-11-22T06:15:04.021175" elapsed="0.352820"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:04.374992" level="INFO">Clicking element 'xpath://span[@id="select2-id_storyboard-container"]'.</msg>
+<arg>${select_storyboard_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:04.373995" elapsed="0.127659"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${submission_due_date_locator}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-22T06:15:04.501654" elapsed="0.043883"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:04.545537" level="INFO">Clicking element 'xpath://input[@id='id_batch_due_date']'.</msg>
+<arg>${submission_due_date_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:04.545537" elapsed="0.083776"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:04.630310" level="INFO">Typing text '2024-11-28 00:00:00' into text field 'xpath://input[@id='id_batch_due_date']'.</msg>
+<arg>${submission_due_date_locator}</arg>
+<arg>${submissionDateInput}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:04.629313" elapsed="0.161569"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${client_due_date_locator}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-22T06:15:04.790882" elapsed="0.021941"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:04.812823" level="INFO">Typing text '2024-11-28 00:00:00' into text field 'xpath://input[@id='id_due_date']'.</msg>
+<arg>${client_due_date_locator}</arg>
+<arg>${clientDateInput}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:04.812823" elapsed="0.182511"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:04.996332" level="INFO">Typing text '900' into text field 'xpath://input[@name="budget"]'.</msg>
+<arg>${budget_locator}</arg>
+<arg>${budgetInput}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:04.995334" elapsed="0.137633"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${creative_talent_locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-11-22T06:15:05.132967" elapsed="0.326530"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:05.461494" level="INFO">Clicking element 'xpath://ul[@class="select2-selection__rendered"]'.</msg>
+<arg>${creative_talent_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:05.460497" elapsed="0.150806"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SapTester_locator}</arg>
+<arg>timeout=5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-22T06:15:05.611303" elapsed="0.065824"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:05.678124" level="INFO">Clicking element 'xpath://li[contains(text(), 'SapTester')]'.</msg>
+<arg>${SapTester_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:05.678124" elapsed="0.105718"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${account_manager_locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-11-22T06:15:05.783842" elapsed="0.290264"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:06.075104" level="INFO">Clicking element 'xpath:(//ul[@class="select2-selection__rendered"])[2]'.</msg>
+<arg>${account_manager_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:06.074106" elapsed="0.084773"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${AgentJ_locator}</arg>
+<arg>timeout=5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-22T06:15:06.158879" elapsed="0.024841"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:06.184719" level="INFO">Clicking element 'xpath://li[contains(text(), 'Agent J')]'.</msg>
+<arg>${AgentJ_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:06.183720" elapsed="0.060839"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${creative_leads_locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-11-22T06:15:06.245556" elapsed="0.299200"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:06.545784" level="INFO">Clicking element 'xpath:(//ul[@class="select2-selection__rendered"])[3]'.</msg>
+<arg>${creative_leads_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:06.544756" elapsed="0.070909"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TesterKasuri_locator}</arg>
+<arg>timeout=5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-22T06:15:06.615665" elapsed="0.026928"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:06.642593" level="INFO">Clicking element 'xpath://li[contains(text(), 'Tester Kasuri')]'.</msg>
+<arg>${TesterKasuri_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:06.642593" elapsed="0.050864"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${submit_button}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-11-22T06:15:06.694456" elapsed="0.305182"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${submit_button}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-22T06:15:07.000638" elapsed="0.020948"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:07.022578" level="INFO">Clicking button 'xpath://button[@class="btn btn-primary"]'.</msg>
+<arg>${submit_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:07.022578" elapsed="5.298547"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'${campaignNameInput}')]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-22T06:15:12.321125" elapsed="0.027925"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:12.400435" level="INFO">${actual_campaign_name} = Test Campaign for Automation10</msg>
+<var>${actual_campaign_name}</var>
+<arg>xpath://a[contains(text(),'${campaignNameInput}')]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:12.349050" elapsed="0.051385"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${actual_campaign_name}</arg>
+<arg>${campaignNameInput}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-11-22T06:15:12.400435" elapsed="0.000000"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:12.401433" level="INFO">Opening url 'https://testing.sapphireapps.com/agency/htmx/campaigns/'</msg>
+<arg>${campaign_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-11-22T06:15:12.400435" elapsed="0.293310"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2024-11-22T06:14:59.332223" elapsed="13.362513"/>
+</iter>
+<iter>
+<kw name="Read Excel Data of Cell" owner="CampaignUserKeyword">
+<kw name="Fetch Cell Data" owner="ReadCampaignData">
+<msg time="2024-11-22T06:15:12.703713" level="INFO">${celldata} = Test Campaign for Automation11</msg>
+<var>${celldata}</var>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-11-22T06:15:12.699725" elapsed="0.003988"/>
+</kw>
+<return>
+<value>${celldata}</value>
+<status status="PASS" start="2024-11-22T06:15:12.705708" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-22T06:15:12.709695" level="INFO">${campaignNameInput} = Test Campaign for Automation11</msg>
+<var>${campaignNameInput}</var>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>1</arg>
+<status status="PASS" start="2024-11-22T06:15:12.697729" elapsed="0.012966"/>
+</kw>
+<kw name="Read Excel Data of Cell" owner="CampaignUserKeyword">
+<kw name="Fetch Cell Data" owner="ReadCampaignData">
+<msg time="2024-11-22T06:15:12.718671" level="INFO">${celldata} = TT</msg>
+<var>${celldata}</var>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-11-22T06:15:12.716676" elapsed="0.001995"/>
+</kw>
+<return>
+<value>${celldata}</value>
+<status status="PASS" start="2024-11-22T06:15:12.719668" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-22T06:15:12.719668" level="INFO">${selectCategory} = TT</msg>
+<var>${selectCategory}</var>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>2</arg>
+<status status="PASS" start="2024-11-22T06:15:12.714683" elapsed="0.005981"/>
+</kw>
+<kw name="Read Excel Data of Cell" owner="CampaignUserKeyword">
+<kw name="Fetch Cell Data" owner="ReadCampaignData">
+<msg time="2024-11-22T06:15:12.723657" level="INFO">${celldata} = 2024-11-28 00:00:00</msg>
+<var>${celldata}</var>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-11-22T06:15:12.722659" elapsed="0.000998"/>
+</kw>
+<return>
+<value>${celldata}</value>
+<status status="PASS" start="2024-11-22T06:15:12.723657" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-22T06:15:12.724655" level="INFO">${submissionDateInput} = 2024-11-28 00:00:00</msg>
+<var>${submissionDateInput}</var>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>3</arg>
+<status status="PASS" start="2024-11-22T06:15:12.720664" elapsed="0.003991"/>
+</kw>
+<kw name="Read Excel Data of Cell" owner="CampaignUserKeyword">
+<kw name="Fetch Cell Data" owner="ReadCampaignData">
+<msg time="2024-11-22T06:15:12.726648" level="INFO">${celldata} = 2024-11-28 00:00:00</msg>
+<var>${celldata}</var>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-11-22T06:15:12.726648" elapsed="0.000998"/>
+</kw>
+<return>
+<value>${celldata}</value>
+<status status="PASS" start="2024-11-22T06:15:12.727646" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-22T06:15:12.728645" level="INFO">${clientDateInput} = 2024-11-28 00:00:00</msg>
+<var>${clientDateInput}</var>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>4</arg>
+<status status="PASS" start="2024-11-22T06:15:12.725652" elapsed="0.002993"/>
+</kw>
+<kw name="Read Excel Data of Cell" owner="CampaignUserKeyword">
+<kw name="Fetch Cell Data" owner="ReadCampaignData">
+<msg time="2024-11-22T06:15:12.732633" level="INFO">${celldata} = 1000</msg>
+<var>${celldata}</var>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-11-22T06:15:12.730638" elapsed="0.002993"/>
+</kw>
+<return>
+<value>${celldata}</value>
+<status status="PASS" start="2024-11-22T06:15:12.733631" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-22T06:15:12.734627" level="INFO">${budgetInput} = 1000</msg>
+<var>${budgetInput}</var>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>5</arg>
+<status status="PASS" start="2024-11-22T06:15:12.728645" elapsed="0.005982"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:12.735629" level="INFO">Clicking element 'xpath://span[@class="ml-2 text-white"]'.</msg>
+<arg>${campaign_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:12.735629" elapsed="2.349036"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:15.084665" level="INFO">Clicking element 'xpath://span[@id="select2-id_client_name-container"]'.</msg>
+<arg>${campaign_form_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:15.084665" elapsed="0.077829"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:15.163493" level="INFO">Typing text 'Test Campaign for Automation11' into text field 'xpath://input[@name="name"]'.</msg>
+<arg>${campaign_name_locator}</arg>
+<arg>${campaignNameInput}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:15.163493" elapsed="0.250330"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:15.414821" level="INFO">Selecting options from selection list 'xpath://select[@name="client_category"]' by value TT.</msg>
+<arg>${select_category_locator}</arg>
+<arg>${selectCategory}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-11-22T06:15:15.413823" elapsed="0.108079"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:15.522899" level="INFO">Clicking element 'xpath://span[@id="select2-id_storyboard-container"]'.</msg>
+<arg>${select_storyboard_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:15.521902" elapsed="0.100730"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${submission_due_date_locator}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-22T06:15:15.622632" elapsed="0.023936"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:15.647566" level="INFO">Clicking element 'xpath://input[@id='id_batch_due_date']'.</msg>
+<arg>${submission_due_date_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:15.647566" elapsed="0.180098"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:15.828666" level="INFO">Typing text '2024-11-28 00:00:00' into text field 'xpath://input[@id='id_batch_due_date']'.</msg>
+<arg>${submission_due_date_locator}</arg>
+<arg>${submissionDateInput}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:15.827664" elapsed="0.187501"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${client_due_date_locator}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-22T06:15:16.015165" elapsed="0.032420"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:16.047585" level="INFO">Typing text '2024-11-28 00:00:00' into text field 'xpath://input[@id='id_due_date']'.</msg>
+<arg>${client_due_date_locator}</arg>
+<arg>${clientDateInput}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:16.047585" elapsed="0.204029"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:16.251614" level="INFO">Typing text '1000' into text field 'xpath://input[@name="budget"]'.</msg>
+<arg>${budget_locator}</arg>
+<arg>${budgetInput}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:16.251614" elapsed="0.140622"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${creative_talent_locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-11-22T06:15:16.392236" elapsed="0.296542"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:16.690773" level="INFO">Clicking element 'xpath://ul[@class="select2-selection__rendered"]'.</msg>
+<arg>${creative_talent_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:16.689775" elapsed="0.079785"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SapTester_locator}</arg>
+<arg>timeout=5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-22T06:15:16.769560" elapsed="0.024933"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:16.794493" level="INFO">Clicking element 'xpath://li[contains(text(), 'SapTester')]'.</msg>
+<arg>${SapTester_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:16.794493" elapsed="0.055233"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${account_manager_locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-11-22T06:15:16.849726" elapsed="0.306188"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:17.157908" level="INFO">Clicking element 'xpath:(//ul[@class="select2-selection__rendered"])[2]'.</msg>
+<arg>${account_manager_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:17.156911" elapsed="0.124661"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${AgentJ_locator}</arg>
+<arg>timeout=5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-22T06:15:17.281572" elapsed="0.019946"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:17.301518" level="INFO">Clicking element 'xpath://li[contains(text(), 'Agent J')]'.</msg>
+<arg>${AgentJ_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:17.301518" elapsed="0.055851"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${creative_leads_locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-11-22T06:15:17.357369" elapsed="0.296220"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:17.654577" level="INFO">Clicking element 'xpath:(//ul[@class="select2-selection__rendered"])[3]'.</msg>
+<arg>${creative_leads_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:17.653589" elapsed="0.105767"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TesterKasuri_locator}</arg>
+<arg>timeout=5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-22T06:15:17.760354" elapsed="0.025931"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:17.787285" level="INFO">Clicking element 'xpath://li[contains(text(), 'Tester Kasuri')]'.</msg>
+<arg>${TesterKasuri_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:17.786285" elapsed="0.048870"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${submit_button}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-11-22T06:15:17.836151" elapsed="0.320147"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${submit_button}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-22T06:15:18.156298" elapsed="0.062614"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:18.219907" level="INFO">Clicking button 'xpath://button[@class="btn btn-primary"]'.</msg>
+<arg>${submit_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:18.218912" elapsed="30.239801"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'${campaignNameInput}')]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-22T06:15:48.459710" elapsed="0.027925"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:48.508581" level="INFO">${actual_campaign_name} = Test Campaign for Automation11</msg>
+<var>${actual_campaign_name}</var>
+<arg>xpath://a[contains(text(),'${campaignNameInput}')]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:48.487635" elapsed="0.020946"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${actual_campaign_name}</arg>
+<arg>${campaignNameInput}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-11-22T06:15:48.508581" elapsed="0.000000"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:48.509575" level="INFO">Opening url 'https://testing.sapphireapps.com/agency/htmx/campaigns/'</msg>
+<arg>${campaign_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-11-22T06:15:48.509575" elapsed="0.522533"/>
+</kw>
+<var name="${i}">2</var>
+<status status="PASS" start="2024-11-22T06:15:12.696732" elapsed="36.335894"/>
+</iter>
+<iter>
+<kw name="Read Excel Data of Cell" owner="CampaignUserKeyword">
+<kw name="Fetch Cell Data" owner="ReadCampaignData">
+<msg time="2024-11-22T06:15:49.038147" level="INFO">${celldata} = Test Campaign for Automation12</msg>
+<var>${celldata}</var>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-11-22T06:15:49.038147" elapsed="0.000996"/>
+</kw>
+<return>
+<value>${celldata}</value>
+<status status="PASS" start="2024-11-22T06:15:49.039143" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-22T06:15:49.039143" level="INFO">${campaignNameInput} = Test Campaign for Automation12</msg>
+<var>${campaignNameInput}</var>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>1</arg>
+<status status="PASS" start="2024-11-22T06:15:49.037151" elapsed="0.001992"/>
+</kw>
+<kw name="Read Excel Data of Cell" owner="CampaignUserKeyword">
+<kw name="Fetch Cell Data" owner="ReadCampaignData">
+<msg time="2024-11-22T06:15:49.041136" level="INFO">${celldata} = TT</msg>
+<var>${celldata}</var>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-11-22T06:15:49.041136" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${celldata}</value>
+<status status="PASS" start="2024-11-22T06:15:49.041136" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-22T06:15:49.042134" level="INFO">${selectCategory} = TT</msg>
+<var>${selectCategory}</var>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>2</arg>
+<status status="PASS" start="2024-11-22T06:15:49.040139" elapsed="0.001995"/>
+</kw>
+<kw name="Read Excel Data of Cell" owner="CampaignUserKeyword">
+<kw name="Fetch Cell Data" owner="ReadCampaignData">
+<msg time="2024-11-22T06:15:49.043132" level="INFO">${celldata} = 2024-11-28 00:00:00</msg>
+<var>${celldata}</var>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-11-22T06:15:49.043132" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${celldata}</value>
+<status status="PASS" start="2024-11-22T06:15:49.044129" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-22T06:15:49.044129" level="INFO">${submissionDateInput} = 2024-11-28 00:00:00</msg>
+<var>${submissionDateInput}</var>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>3</arg>
+<status status="PASS" start="2024-11-22T06:15:49.042134" elapsed="0.001995"/>
+</kw>
+<kw name="Read Excel Data of Cell" owner="CampaignUserKeyword">
+<kw name="Fetch Cell Data" owner="ReadCampaignData">
+<msg time="2024-11-22T06:15:49.045126" level="INFO">${celldata} = 2024-11-28 00:00:00</msg>
+<var>${celldata}</var>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-11-22T06:15:49.045126" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${celldata}</value>
+<status status="PASS" start="2024-11-22T06:15:49.046123" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-22T06:15:49.046123" level="INFO">${clientDateInput} = 2024-11-28 00:00:00</msg>
+<var>${clientDateInput}</var>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>4</arg>
+<status status="PASS" start="2024-11-22T06:15:49.044129" elapsed="0.001994"/>
+</kw>
+<kw name="Read Excel Data of Cell" owner="CampaignUserKeyword">
+<kw name="Fetch Cell Data" owner="ReadCampaignData">
+<msg time="2024-11-22T06:15:49.048119" level="INFO">${celldata} = 1100</msg>
+<var>${celldata}</var>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-11-22T06:15:49.047121" elapsed="0.000998"/>
+</kw>
+<return>
+<value>${celldata}</value>
+<status status="PASS" start="2024-11-22T06:15:49.048119" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-22T06:15:49.048119" level="INFO">${budgetInput} = 1100</msg>
+<var>${budgetInput}</var>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>5</arg>
+<status status="PASS" start="2024-11-22T06:15:49.046123" elapsed="0.001996"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:49.049115" level="INFO">Clicking element 'xpath://span[@class="ml-2 text-white"]'.</msg>
+<arg>${campaign_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:49.049115" elapsed="2.442509"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:51.492622" level="INFO">Clicking element 'xpath://span[@id="select2-id_client_name-container"]'.</msg>
+<arg>${campaign_form_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:51.491624" elapsed="0.120179"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:51.612800" level="INFO">Typing text 'Test Campaign for Automation12' into text field 'xpath://input[@name="name"]'.</msg>
+<arg>${campaign_name_locator}</arg>
+<arg>${campaignNameInput}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:51.612800" elapsed="0.362309"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:51.976106" level="INFO">Selecting options from selection list 'xpath://select[@name="client_category"]' by value TT.</msg>
+<arg>${select_category_locator}</arg>
+<arg>${selectCategory}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-11-22T06:15:51.975109" elapsed="0.124667"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:52.099776" level="INFO">Clicking element 'xpath://span[@id="select2-id_storyboard-container"]'.</msg>
+<arg>${select_storyboard_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:52.099776" elapsed="0.115698"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${submission_due_date_locator}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-22T06:15:52.215474" elapsed="0.036893"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:52.252367" level="INFO">Clicking element 'xpath://input[@id='id_batch_due_date']'.</msg>
+<arg>${submission_due_date_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:52.252367" elapsed="0.123552"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:52.376917" level="INFO">Typing text '2024-11-28 00:00:00' into text field 'xpath://input[@id='id_batch_due_date']'.</msg>
+<arg>${submission_due_date_locator}</arg>
+<arg>${submissionDateInput}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:52.375919" elapsed="0.218977"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${client_due_date_locator}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-22T06:15:52.594896" elapsed="0.052373"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:52.649265" level="INFO">Typing text '2024-11-28 00:00:00' into text field 'xpath://input[@id='id_due_date']'.</msg>
+<arg>${client_due_date_locator}</arg>
+<arg>${clientDateInput}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:52.648275" elapsed="0.221171"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:52.870443" level="INFO">Typing text '1100' into text field 'xpath://input[@name="budget"]'.</msg>
+<arg>${budget_locator}</arg>
+<arg>${budgetInput}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:52.870443" elapsed="0.142705"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${creative_talent_locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-11-22T06:15:53.013148" elapsed="0.295613"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:53.309757" level="INFO">Clicking element 'xpath://ul[@class="select2-selection__rendered"]'.</msg>
+<arg>${creative_talent_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:53.309757" elapsed="0.106707"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SapTester_locator}</arg>
+<arg>timeout=5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-22T06:15:53.416464" elapsed="0.021939"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:53.439401" level="INFO">Clicking element 'xpath://li[contains(text(), 'SapTester')]'.</msg>
+<arg>${SapTester_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:53.438403" elapsed="0.069814"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${account_manager_locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-11-22T06:15:53.509215" elapsed="0.288229"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:53.798442" level="INFO">Clicking element 'xpath:(//ul[@class="select2-selection__rendered"])[2]'.</msg>
+<arg>${account_manager_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:53.798442" elapsed="0.083780"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${AgentJ_locator}</arg>
+<arg>timeout=5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-22T06:15:53.882222" elapsed="0.019941"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:53.903160" level="INFO">Clicking element 'xpath://li[contains(text(), 'Agent J')]'.</msg>
+<arg>${AgentJ_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:53.902163" elapsed="0.049868"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${creative_leads_locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-11-22T06:15:53.953029" elapsed="0.297585"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:54.252194" level="INFO">Clicking element 'xpath:(//ul[@class="select2-selection__rendered"])[3]'.</msg>
+<arg>${creative_leads_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:54.251610" elapsed="0.111252"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TesterKasuri_locator}</arg>
+<arg>timeout=5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-22T06:15:54.363858" elapsed="0.031919"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:54.395777" level="INFO">Clicking element 'xpath://li[contains(text(), 'Tester Kasuri')]'.</msg>
+<arg>${TesterKasuri_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:54.395777" elapsed="0.052855"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${submit_button}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-11-22T06:15:54.449631" elapsed="0.319214"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${submit_button}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-22T06:15:54.768845" elapsed="0.044876"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:54.814719" level="INFO">Clicking button 'xpath://button[@class="btn btn-primary"]'.</msg>
+<arg>${submit_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:54.813721" elapsed="5.120983"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'${campaignNameInput}')]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-22T06:15:59.934704" elapsed="0.039092"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:59.994771" level="INFO">${actual_campaign_name} = Test Campaign for Automation12</msg>
+<var>${actual_campaign_name}</var>
+<arg>xpath://a[contains(text(),'${campaignNameInput}')]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:15:59.973796" elapsed="0.020975"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${actual_campaign_name}</arg>
+<arg>${campaignNameInput}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-11-22T06:15:59.995769" elapsed="0.000000"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:15:59.995769" level="INFO">Opening url 'https://testing.sapphireapps.com/agency/htmx/campaigns/'</msg>
+<arg>${campaign_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-11-22T06:15:59.995769" elapsed="0.570476"/>
+</kw>
+<var name="${i}">3</var>
+<status status="PASS" start="2024-11-22T06:15:49.033152" elapsed="11.533093"/>
+</iter>
+<iter>
+<kw name="Read Excel Data of Cell" owner="CampaignUserKeyword">
+<kw name="Fetch Cell Data" owner="ReadCampaignData">
+<msg time="2024-11-22T06:16:00.569237" level="INFO">${celldata} = Test Campaign for Automation13</msg>
+<var>${celldata}</var>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-11-22T06:16:00.568239" elapsed="0.000998"/>
+</kw>
+<return>
+<value>${celldata}</value>
+<status status="PASS" start="2024-11-22T06:16:00.569237" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-22T06:16:00.570235" level="INFO">${campaignNameInput} = Test Campaign for Automation13</msg>
+<var>${campaignNameInput}</var>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>1</arg>
+<status status="PASS" start="2024-11-22T06:16:00.567241" elapsed="0.002994"/>
+</kw>
+<kw name="Read Excel Data of Cell" owner="CampaignUserKeyword">
+<kw name="Fetch Cell Data" owner="ReadCampaignData">
+<msg time="2024-11-22T06:16:00.571231" level="INFO">${celldata} = TT</msg>
+<var>${celldata}</var>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-11-22T06:16:00.571231" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${celldata}</value>
+<status status="PASS" start="2024-11-22T06:16:00.571231" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-22T06:16:00.572228" level="INFO">${selectCategory} = TT</msg>
+<var>${selectCategory}</var>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>2</arg>
+<status status="PASS" start="2024-11-22T06:16:00.570235" elapsed="0.001993"/>
+</kw>
+<kw name="Read Excel Data of Cell" owner="CampaignUserKeyword">
+<kw name="Fetch Cell Data" owner="ReadCampaignData">
+<msg time="2024-11-22T06:16:00.573225" level="INFO">${celldata} = 2024-11-28 00:00:00</msg>
+<var>${celldata}</var>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-11-22T06:16:00.573225" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${celldata}</value>
+<status status="PASS" start="2024-11-22T06:16:00.574223" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-22T06:16:00.574223" level="INFO">${submissionDateInput} = 2024-11-28 00:00:00</msg>
+<var>${submissionDateInput}</var>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>3</arg>
+<status status="PASS" start="2024-11-22T06:16:00.572228" elapsed="0.001995"/>
+</kw>
+<kw name="Read Excel Data of Cell" owner="CampaignUserKeyword">
+<kw name="Fetch Cell Data" owner="ReadCampaignData">
+<msg time="2024-11-22T06:16:00.576219" level="INFO">${celldata} = 2024-11-28 00:00:00</msg>
+<var>${celldata}</var>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-11-22T06:16:00.575220" elapsed="0.000999"/>
+</kw>
+<return>
+<value>${celldata}</value>
+<status status="PASS" start="2024-11-22T06:16:00.576219" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-22T06:16:00.577215" level="INFO">${clientDateInput} = 2024-11-28 00:00:00</msg>
+<var>${clientDateInput}</var>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>4</arg>
+<status status="PASS" start="2024-11-22T06:16:00.574223" elapsed="0.002992"/>
+</kw>
+<kw name="Read Excel Data of Cell" owner="CampaignUserKeyword">
+<kw name="Fetch Cell Data" owner="ReadCampaignData">
+<msg time="2024-11-22T06:16:00.580216" level="INFO">${celldata} = 1250</msg>
+<var>${celldata}</var>
+<arg>${Sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<status status="PASS" start="2024-11-22T06:16:00.579211" elapsed="0.001005"/>
+</kw>
+<return>
+<value>${celldata}</value>
+<status status="PASS" start="2024-11-22T06:16:00.581204" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-22T06:16:00.581204" level="INFO">${budgetInput} = 1250</msg>
+<var>${budgetInput}</var>
+<arg>Sheet1</arg>
+<arg>${i}</arg>
+<arg>5</arg>
+<status status="PASS" start="2024-11-22T06:16:00.577215" elapsed="0.003989"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:16:00.582203" level="INFO">Clicking element 'xpath://span[@class="ml-2 text-white"]'.</msg>
+<arg>${campaign_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:16:00.581204" elapsed="2.131834"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:16:02.714037" level="INFO">Clicking element 'xpath://span[@id="select2-id_client_name-container"]'.</msg>
+<arg>${campaign_form_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:16:02.713038" elapsed="0.090229"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:16:02.804265" level="INFO">Typing text 'Test Campaign for Automation13' into text field 'xpath://input[@name="name"]'.</msg>
+<arg>${campaign_name_locator}</arg>
+<arg>${campaignNameInput}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:16:02.804265" elapsed="0.232371"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:16:03.037634" level="INFO">Selecting options from selection list 'xpath://select[@name="client_category"]' by value TT.</msg>
+<arg>${select_category_locator}</arg>
+<arg>${selectCategory}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-11-22T06:16:03.037634" elapsed="0.104720"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:16:03.143356" level="INFO">Clicking element 'xpath://span[@id="select2-id_storyboard-container"]'.</msg>
+<arg>${select_storyboard_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:16:03.143356" elapsed="0.105117"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${submission_due_date_locator}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-22T06:16:03.249472" elapsed="0.026927"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:16:03.277403" level="INFO">Clicking element 'xpath://input[@id='id_batch_due_date']'.</msg>
+<arg>${submission_due_date_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:16:03.276399" elapsed="0.146120"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:16:03.423516" level="INFO">Typing text '2024-11-28 00:00:00' into text field 'xpath://input[@id='id_batch_due_date']'.</msg>
+<arg>${submission_due_date_locator}</arg>
+<arg>${submissionDateInput}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:16:03.422519" elapsed="0.175531"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${client_due_date_locator}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-22T06:16:03.598050" elapsed="0.026932"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:16:03.625974" level="INFO">Typing text '2024-11-28 00:00:00' into text field 'xpath://input[@id='id_due_date']'.</msg>
+<arg>${client_due_date_locator}</arg>
+<arg>${clientDateInput}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:16:03.624982" elapsed="0.238939"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:16:03.863921" level="INFO">Typing text '1250' into text field 'xpath://input[@name="budget"]'.</msg>
+<arg>${budget_locator}</arg>
+<arg>${budgetInput}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:16:03.863921" elapsed="0.128656"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${creative_talent_locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-11-22T06:16:03.992577" elapsed="0.298732"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:16:04.292306" level="INFO">Clicking element 'xpath://ul[@class="select2-selection__rendered"]'.</msg>
+<arg>${creative_talent_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:16:04.291309" elapsed="0.085771"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SapTester_locator}</arg>
+<arg>timeout=5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-22T06:16:04.378076" elapsed="0.027928"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:16:04.406004" level="INFO">Clicking element 'xpath://li[contains(text(), 'SapTester')]'.</msg>
+<arg>${SapTester_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:16:04.406004" elapsed="0.052858"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${account_manager_locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-11-22T06:16:04.458862" elapsed="0.284583"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:16:04.745480" level="INFO">Clicking element 'xpath:(//ul[@class="select2-selection__rendered"])[2]'.</msg>
+<arg>${account_manager_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:16:04.744483" elapsed="0.111656"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${AgentJ_locator}</arg>
+<arg>timeout=5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-22T06:16:04.857136" elapsed="0.015957"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:16:04.874090" level="INFO">Clicking element 'xpath://li[contains(text(), 'Agent J')]'.</msg>
+<arg>${AgentJ_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:16:04.873093" elapsed="0.050865"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${creative_leads_locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-11-22T06:16:04.923958" elapsed="0.286235"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:16:05.211189" level="INFO">Clicking element 'xpath:(//ul[@class="select2-selection__rendered"])[3]'.</msg>
+<arg>${creative_leads_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:16:05.210193" elapsed="0.126994"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TesterKasuri_locator}</arg>
+<arg>timeout=5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-22T06:16:05.338187" elapsed="0.019944"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:16:05.358131" level="INFO">Clicking element 'xpath://li[contains(text(), 'Tester Kasuri')]'.</msg>
+<arg>${TesterKasuri_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:16:05.358131" elapsed="0.053857"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${submit_button}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-11-22T06:16:05.411988" elapsed="0.302564"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${submit_button}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-22T06:16:05.714552" elapsed="0.042935"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:16:05.758478" level="INFO">Clicking button 'xpath://button[@class="btn btn-primary"]'.</msg>
+<arg>${submit_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:16:05.758478" elapsed="2.201620"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'${campaignNameInput}')]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-22T06:16:07.960098" elapsed="0.024933"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:16:08.002984" level="INFO">${actual_campaign_name} = Test Campaign for Automation13</msg>
+<var>${actual_campaign_name}</var>
+<arg>xpath://a[contains(text(),'${campaignNameInput}')]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T06:16:07.985031" elapsed="0.018949"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${actual_campaign_name}</arg>
+<arg>${campaignNameInput}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-11-22T06:16:08.003980" elapsed="0.000000"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-11-22T06:16:08.003980" level="INFO">Opening url 'https://testing.sapphireapps.com/agency/htmx/campaigns/'</msg>
+<arg>${campaign_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-11-22T06:16:08.003980" elapsed="0.574506"/>
+</kw>
+<var name="${i}">4</var>
+<status status="PASS" start="2024-11-22T06:16:00.567241" elapsed="8.011245"/>
+</iter>
+<var>${i}</var>
+<value>1</value>
+<value>${row}+1</value>
+<status status="PASS" start="2024-11-22T06:14:59.332223" elapsed="69.246263"/>
+</for>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-22T06:16:08.580483" elapsed="2.715362"/>
+</kw>
+<status status="PASS" start="2024-11-22T06:14:50.515065" elapsed="80.781777"/>
+</test>
+<status status="PASS" start="2024-11-22T06:14:49.747118" elapsed="81.552718"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Campaign">Campaign</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-11-22T06:14:50.506089" level="WARN">Error in file 'C:\Users\lenovo\PycharmProjects\SapphireTestAutomation\Resources\CampaignUserKeyword.robot' on line 11: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-11-22T06:14:50.507087" level="WARN">Error in file 'C:\Users\lenovo\PycharmProjects\SapphireTestAutomation\Resources\CampaignUserKeyword.robot' on line 16: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>
