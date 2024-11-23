@@ -2,6 +2,7 @@
 Library        SeleniumLibrary
 
 *** Variables ***
+# URL and Browsers 
 ${url}        https://testing.sapphireapps.com/authentication/login/
 ${campaign_url}        https://testing.sapphireapps.com/agency/htmx/campaigns/
 ${browser}        Chrome
