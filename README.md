@@ -1,8 +1,8 @@
-Sapphire Test Automation
+**Sapphire Test Automation**
 
 A robust and scalable test automation framework designed to streamline quality assurance processes for Sapphire projects. This repository houses a suite of automated tests developed using industry-standard tools and practices.
 
-Table of Contents
+**Table of Contents**
 
 Overview
 Features
@@ -13,11 +13,11 @@ Running Tests
 Reporting
 Contributing
 
-Overview
+**Overview**
 
 The SapphireTestAutomation framework is designed to enhance testing efficiency and reliability by automating repetitive and critical test scenarios. It supports integration with CI/CD pipelines, ensuring quality at every stage of development.
 
-Features
+**Features**
 
 Modular and reusable test components.
 Support for functional, regression, and integration testing.
@@ -25,7 +25,7 @@ Seamless CI/CD integration.
 Detailed test reporting and logging.
 Easily extendable for additional test cases and modules.
 
-Technologies Used
+**Technologies Used**
 
 Programming Language: [Python, HTML]
 Test Framework: [RobotFramework-SeleniumLibraries]
@@ -33,7 +33,7 @@ Build Tool: [npm]
 Reporting Tool: [Allure]
 Other Tools/Technologies: [Jenkins, Git]
 
-Folder Structure
+**Folder Structure**
 
 SapphireTestAutomation/
 ├── src/
@@ -45,7 +45,7 @@ SapphireTestAutomation/
 ├── README.md                # Project documentation
 ├── .gitignore               # Git ignore file
 
-Setup Instructions
+**Setup Instructions**
 
 Prerequisites
 
@@ -66,7 +66,7 @@ pip install robertframework
 pip install robertframework-seleniumLibrary
 pip install openpyxl
 
-Running Tests
+**Running Tests**
 
 Execute All Tests 
 robot Pages
@@ -74,12 +74,12 @@ robot Pages
 Run Specific Tests
 robot Campaign.robot
 
-Reporting
+**Reporting**
 
 Generated test reports can be found in the reports/ directory. Open the HTML report in your browser:
 file:///C:/Users/lenovo/PycharmProjects/SapphireTestAutomation/Pages/report.html
 
-Contributing
+**Contributing**
 
 Contributions are welcome! To contribute:
 
