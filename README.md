@@ -40,13 +40,21 @@ Other Tools/Technologies: [Jenkins, Git]
 **Folder Structure**
 
 SapphireTestAutomation/
+
 ├── src/
-│   ├── tests/              
-│   ├── pages/               
-│   ├── utils/              
-├── reports/               
-├── config/                
-├── README.md            
+
+│   ├── tests/
+
+│   ├── pages/
+
+│   ├── utils/
+
+├── reports/
+
+├── config/
+
+├── README.md
+
 ├── .gitignore
 
 **Setup Instructions**
