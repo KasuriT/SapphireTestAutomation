@@ -28,15 +28,18 @@ Easily extendable for additional test cases and modules.
 **Technologies Used**
 
 Programming Language: [Python, HTML]
+
 Test Framework: [RobotFramework-SeleniumLibraries]
+
 Build Tool: [npm]
+
 Reporting Tool: [Allure]
+
 Other Tools/Technologies: [Jenkins, Git]
 
 **Folder Structure**
 
 SapphireTestAutomation/
-
 ├── src/
 │   ├── tests/              
 │   ├── pages/               
