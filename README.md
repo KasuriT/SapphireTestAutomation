@@ -36,14 +36,15 @@ Other Tools/Technologies: [Jenkins, Git]
 **Folder Structure**
 
 SapphireTestAutomation/
+
 ├── src/
-│   ├── tests/               # Test scripts
-│   ├── pages/               # Page Object Models
-│   ├── utils/               # Utility functions
-├── reports/                 # Test execution reports
-├── config/                  # Configuration files
-├── README.md                # Project documentation
-├── .gitignore               # Git ignore file
+│   ├── tests/              
+│   ├── pages/               
+│   ├── utils/              
+├── reports/               
+├── config/                
+├── README.md            
+├── .gitignore
 
 **Setup Instructions**
 
@@ -51,15 +52,16 @@ Prerequisites
 
 Install [RobotFramework, Python, RobotFramework- Selenium Libraries, openpyxl, JasonPath].
 
-Clone this repository:
+**Clone this repository:**
+
 git clone https://github.com/KasuriT/SapphireTestAutomation.git
 
-Installation
+**Installation**
 
 Navigate to the project directory:
 cd SapphireTestAutomation
 
-Install dependencies:
+**Install dependencies:**
 
 pip install jsonpath
 pip install robertframework
